@@ -7,6 +7,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -33,6 +34,11 @@ public class ExceptionConfig extends ResponseEntityExceptionHandler {
 	@ExceptionHandler({ IllegalArgumentException.class })
 	public ResponseEntity<Object> errorBadRequest(IllegalArgumentException ex) {
 		return new ResponseEntity<>(new ApiErrors(ex.getMessage()), HttpStatus.METHOD_NOT_ALLOWED);
+	}
+	
+	@ExceptionHandler({ AccessDeniedException.class })
+	public ResponseEntity<Object> accessDenied() {
+		return new ResponseEntity<>(new ApiErrors("Acesso negado."), HttpStatus.UNAUTHORIZED);
 	}
 	
 	@ExceptionHandler({ ResponseStatusException.class })

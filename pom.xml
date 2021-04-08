@@ -7,7 +7,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.4.4</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath />
 	</parent>
 	<groupId>br.com.ampla</groupId>
 	<artifactId>marca</artifactId>
@@ -16,6 +16,8 @@
 	<description>Registro de Marca Ampla</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -74,6 +76,18 @@
 			<artifactId>commons-csv</artifactId>
 			<version>1.8</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+			<version>1.1.1.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
