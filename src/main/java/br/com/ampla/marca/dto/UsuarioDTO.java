@@ -19,7 +19,6 @@ public class UsuarioDTO {
 	private String nome;
 	private String email;
 
-	// token jwt
 	private String token;
 
 	public static UsuarioDTO create(Usuario usuario) {

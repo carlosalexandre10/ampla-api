@@ -12,9 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Classe chamada quando acontece o erro 403 - FORBIDDEN
- */
 @Component
 public class AccessDeniedHandler implements org.springframework.security.web.access.AccessDeniedHandler {
 

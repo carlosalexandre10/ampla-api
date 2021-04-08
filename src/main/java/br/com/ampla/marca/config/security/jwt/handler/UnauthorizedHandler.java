@@ -21,7 +21,6 @@ public class UnauthorizedHandler implements AuthenticationEntryPoint {
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
         logger.warn("UnauthorizedHandler, exception: " + authException);
 
-        // Chamado se token errado ou ausente
         String json = ServletUtil.getJson("error", "Não autorizado.");
         ServletUtil.write(response, HttpStatus.FORBIDDEN, json);
     }

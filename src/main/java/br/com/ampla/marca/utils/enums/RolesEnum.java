@@ -1,5 +1,10 @@
 package br.com.ampla.marca.utils.enums;
 
+import br.com.ampla.marca.utils.enums.config.DescricaoRecuperavel;
+import br.com.ampla.marca.utils.enums.config.RecuperadorEnumPorValor;
+import br.com.ampla.marca.utils.enums.config.ValorEnumInvalidoException;
+import br.com.ampla.marca.utils.enums.config.ValorRecuperavel;
+
 public enum RolesEnum implements ValorRecuperavel, DescricaoRecuperavel {
 
 	ROLE_USER(1, "ROLE_USER"), ROLE_ADMIN(2, "ROLE_ADMIN");

@@ -1,4 +1,4 @@
-package br.com.ampla.marca.utils.enums;
+package br.com.ampla.marca.utils.enums.config;
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -1,4 +1,4 @@
-package br.com.ampla.marca.utils.enums;
+package br.com.ampla.marca.utils.enums.config;
 
 public class ValorEnumInvalidoException extends RuntimeException{
 	private static final long serialVersionUID = 1L;
