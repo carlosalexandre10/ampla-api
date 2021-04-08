@@ -24,8 +24,7 @@ public class UsuarioController {
 	@PostMapping()
 	public ResponseEntity<UsuarioDTO> incluir(@RequestBody @Valid Usuario usuario) {
 		UsuarioDTO cursoDTO = this.usuarioService.incluir(usuario);
-
+		
 		return ResponseEntity.status(HttpStatus.CREATED).body(cursoDTO);
 	}
-
 }

@@ -1,4 +1,4 @@
-package br.com.ampla.marca.config;
+package br.com.ampla.marca.config.exception;
 
 import java.util.List;
 import java.util.stream.Collectors;
