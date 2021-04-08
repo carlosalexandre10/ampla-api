@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import br.com.ampla.marca.dto.MarcaDTO;
@@ -20,8 +21,8 @@ public class MarcaService {
 		return MarcaDTO.create(this.marcaRepository.save(marca));
 	}
 	
-	public List<MarcaDTO> listar() {
-		return this.marcaRepository.findAll().stream().map(MarcaDTO::create)
+	public List<MarcaDTO> listar(Pageable pageable) {
+		return this.marcaRepository.findAll(pageable).stream().map(MarcaDTO::create)
 				.collect(Collectors.toList());
 	}
 }
