@@ -40,7 +40,7 @@ public class LeitorCSVService {
 	public String save(MultipartFile file) {
 		try {
 			if (!"text/csv".equals(file.getContentType())) {
-				throw new Error("Só é permitido upload de arquivos .csv");
+				throw new IllegalArgumentException("Só é permitido upload de arquivos .csv");
 			}
 
 			BufferedReader fileReader = new BufferedReader(new InputStreamReader(file.getInputStream(), "ISO-8859-1"));
