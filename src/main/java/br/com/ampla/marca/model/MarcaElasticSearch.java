@@ -1,7 +1,10 @@
 package br.com.ampla.marca.model;
 
+import java.time.LocalDate;
+
 import javax.persistence.Id;
 
+import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
@@ -18,6 +21,9 @@ public class MarcaElasticSearch {
 
 	@Id
 	private String id;
+
+	@Field(type = FieldType.Float, name = "numeroProcesso")
+	private Long numeroProcesso;
 
 	@Field(type = FieldType.Text, name = "nomeMarca")
 	private String nomeMarca;
@@ -36,16 +42,16 @@ public class MarcaElasticSearch {
 
 	@Field(type = FieldType.Text, name = "nomeRepresentanteLegal")
 	private String nomeRepresentanteLegal;
-//
-//	@Field(type = FieldType.Date, name = "data_deposito")
-//	private Date dataDeposito;
-//
-//	@Field(type = FieldType.Date, name = "data_concessao")
-//	private Date dataConcessao;
-//
-//	@Field(type = FieldType.Date, name = "data_vigencia")
-//	private Date dataVigencia;
 
-	@Field(type = FieldType.Text, name = "nome_titular")
+	@Field(type = FieldType.Date, name = "dataDeposito", format = DateFormat.custom, pattern = "uuuu-MM-dd'T'HH:mm:ss.SSS")
+	private LocalDate dataDeposito;
+
+	@Field(type = FieldType.Date, name = "dataConcessao", format = DateFormat.custom, pattern = "uuuu-MM-dd'T'HH:mm:ss.SSS")
+	private LocalDate dataConcessao;
+
+	@Field(type = FieldType.Date, name = "dataVigencia", format = DateFormat.custom, pattern = "uuuu-MM-dd'T'HH:mm:ss.SSS")
+	private LocalDate dataVigencia;
+
+	@Field(type = FieldType.Text, name = "nomeTitular")
 	private String nomeTitular;
 }

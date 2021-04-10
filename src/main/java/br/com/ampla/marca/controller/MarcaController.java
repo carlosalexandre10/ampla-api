@@ -36,12 +36,16 @@ public class MarcaController {
 		marcas.stream().forEach(marca -> {
 			MarcaElasticSearch marcaElasticSearch = new MarcaElasticSearch();
 
+			marcaElasticSearch.setNumeroProcesso(marca.getNumeroProcesso());
 			marcaElasticSearch.setNomeMarca(marca.getNomeMarca());
 			marcaElasticSearch.setDescricaoSituacao(marca.getDescricaoSituacao());
 			marcaElasticSearch.setDescricaoApresentacao(marca.getDescricaoApresentacao());
 			marcaElasticSearch.setDescricaoNatureza(marca.getDescricaoNatureza());
 			marcaElasticSearch.setClassificacaoViena(marca.getClassificacaoViena());
 			marcaElasticSearch.setNomeRepresentanteLegal(marca.getNomeRepresentanteLegal());
+			marcaElasticSearch.setDataDeposito(marca.getDataDeposito());
+			marcaElasticSearch.setDataConcessao(marca.getDataConcessao());
+			marcaElasticSearch.setDataVigencia(marca.getDataVigencia());
 			marcaElasticSearch.setNomeTitular(marca.getNomeTitular());
 
 			marcasElasticSearchParaSalvar.add(marcaElasticSearch);
