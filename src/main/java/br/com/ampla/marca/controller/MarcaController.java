@@ -47,18 +47,11 @@ public class MarcaController {
 			marcasElasticSearchParaSalvar.add(marcaElasticSearch);
 		});
 
-		// this.marcaElasticSearchService.createProductIndexBulk(marcasElasticSearchParaSalvar);
+		this.marcaElasticSearchService.incluir(marcasElasticSearchParaSalvar);
 
 		List<MarcaElasticSearch> marcasElasticSearch = this.marcaElasticSearchService.findByNomeMarca(nomeMarca);
 
 		return marcasElasticSearch.isEmpty() ? ResponseEntity.noContent().build()
 				: ResponseEntity.ok(marcasElasticSearch);
 	}
-
-//	public ResponseEntity<List<MarcaDTO>> listar(@RequestParam(value = "page", defaultValue = "0") Integer page,
-//			@RequestParam(value = "size", defaultValue = "10") Integer size) {
-//		List<MarcaDTO> MarcasDTO = this.marcaService.listar(PageRequest.of(page, size));
-//
-//		return MarcasDTO.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(MarcasDTO);
-//	}
 }
