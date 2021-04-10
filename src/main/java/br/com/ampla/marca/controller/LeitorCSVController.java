@@ -25,5 +25,4 @@ public class LeitorCSVController {
 
 		return ResponseEntity.ok(message);
 	}
-
 }

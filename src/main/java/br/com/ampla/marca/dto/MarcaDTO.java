@@ -9,8 +9,7 @@ import lombok.Data;
 
 @Data
 public class MarcaDTO {
-private Long numeroProcesso;
-	
+	private Long numeroProcesso;
 	private String nomeMarca;
 	private String descricaoSituacao;
 	private String descricaoApresentacao;
