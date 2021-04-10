@@ -12,6 +12,7 @@ import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Service;
 
+import br.com.ampla.marca.dto.MarcaElasticSearchDTO;
 import br.com.ampla.marca.model.MarcaElasticSearch;
 import br.com.ampla.marca.repository.MarcaElasticSearchRepository;
 
@@ -30,11 +31,11 @@ public class MarcaElasticSearchService {
 		marcaElasticSearchRepository.saveAll(marcas);
 	}
 
-	public List<MarcaElasticSearch> findByNomeMarca(final String nomeMarca) {
+	public List<MarcaElasticSearchDTO> findByNomeMarca(final String nomeMarca) {
 		NativeSearchQuery searchQuery = new NativeSearchQueryBuilder()
 				.withFilter(QueryBuilders.matchQuery("nomeMarca", nomeMarca).fuzziness(Fuzziness.AUTO)).build();
 
 		return elasticsearchOperations.search(searchQuery, MarcaElasticSearch.class, IndexCoordinates.of(MARCA_INDEX))
-				.stream().map(marca -> marca.getContent()).collect(Collectors.toList());
+				.stream().map(marca -> MarcaElasticSearchDTO.create(marca.getContent())).collect(Collectors.toList());
 	}
 }

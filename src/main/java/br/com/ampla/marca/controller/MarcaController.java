@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ampla.marca.dto.MarcaDTO;
+import br.com.ampla.marca.dto.MarcaElasticSearchDTO;
 import br.com.ampla.marca.model.MarcaElasticSearch;
 import br.com.ampla.marca.repository.MarcaRepository;
 import br.com.ampla.marca.service.MarcaElasticSearchService;
@@ -28,7 +29,7 @@ public class MarcaController {
 	private MarcaRepository marcaRepository;
 
 	@GetMapping("/{nomeMarca}")
-	public ResponseEntity<List<MarcaElasticSearch>> pesquisarPorDescricao(@PathVariable String nomeMarca) {
+	public ResponseEntity<List<MarcaElasticSearchDTO>> pesquisarPorDescricao(@PathVariable String nomeMarca) {
 		List<MarcaDTO> marcas = marcaRepository.findAll(PageRequest.of(0, 10)).stream().map(MarcaDTO::create)
 				.collect(Collectors.toList());
 
@@ -51,9 +52,9 @@ public class MarcaController {
 			marcasElasticSearchParaSalvar.add(marcaElasticSearch);
 		});
 
-		this.marcaElasticSearchService.incluir(marcasElasticSearchParaSalvar);
+		//this.marcaElasticSearchService.incluir(marcasElasticSearchParaSalvar);
 
-		List<MarcaElasticSearch> marcasElasticSearch = this.marcaElasticSearchService.findByNomeMarca(nomeMarca);
+		List<MarcaElasticSearchDTO> marcasElasticSearch = this.marcaElasticSearchService.findByNomeMarca(nomeMarca);
 
 		return marcasElasticSearch.isEmpty() ? ResponseEntity.noContent().build()
 				: ResponseEntity.ok(marcasElasticSearch);
