@@ -12,11 +12,13 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity()
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class RevistaPropriedadeIndustrial {
 	
 	@Id
