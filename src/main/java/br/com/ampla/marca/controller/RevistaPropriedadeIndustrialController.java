@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.ampla.marca.dto.NiceDTO;
 import br.com.ampla.marca.dto.RevistaPropriedadeIndustrialDTO;
-import br.com.ampla.marca.service.NiceService;
 import br.com.ampla.marca.service.RevistaPropriedadeIndustrialService;
 
 @RestController
