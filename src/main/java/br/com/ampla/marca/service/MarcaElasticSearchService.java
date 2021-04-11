@@ -7,7 +7,10 @@ import org.elasticsearch.common.unit.Fuzziness;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.data.elasticsearch.core.IndexedObjectInformation;
 import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
+import org.springframework.data.elasticsearch.core.query.IndexQuery;
+import org.springframework.data.elasticsearch.core.query.IndexQueryBuilder;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Service;
@@ -37,5 +40,14 @@ public class MarcaElasticSearchService {
 
 		return elasticsearchOperations.search(searchQuery, MarcaElasticSearch.class, IndexCoordinates.of(MARCA_INDEX))
 				.stream().map(marca -> MarcaElasticSearchDTO.create(marca.getContent())).collect(Collectors.toList());
+	}
+
+	public void migrarElasticsearch(final List<MarcaElasticSearch> marcas) {
+		this.removerDadosElasticsearch();
+		marcaElasticSearchRepository.saveAll(marcas);
+
+	}
+	public void removerDadosElasticsearch() {
+		marcaElasticSearchRepository.deleteAll();
 	}
 }

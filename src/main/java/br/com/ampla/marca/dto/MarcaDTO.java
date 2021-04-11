@@ -23,7 +23,6 @@ public class MarcaDTO {
 
 	public static MarcaDTO create(Marca marca) {
 		ModelMapper modelMapper = new ModelMapper();
-		return modelMapper.map(marca, MarcaDTO.class);
-
+		return marca != null? modelMapper.map(marca, MarcaDTO.class):null;
 	}
 }

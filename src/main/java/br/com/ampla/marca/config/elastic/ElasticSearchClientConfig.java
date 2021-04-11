@@ -10,7 +10,7 @@ import org.springframework.data.elasticsearch.config.AbstractElasticsearchConfig
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "io.pratik.elasticsearch.repositories")
+@EnableElasticsearchRepositories(basePackages = "io.pratik.el	asticsearch.repositories")
 @ComponentScan(basePackages = { "io.pratik.elasticsearch" })
 public class ElasticSearchClientConfig extends AbstractElasticsearchConfiguration {
 
