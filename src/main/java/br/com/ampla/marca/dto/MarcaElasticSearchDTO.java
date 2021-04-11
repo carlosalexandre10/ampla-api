@@ -4,11 +4,11 @@ import java.time.LocalDate;
 
 import org.modelmapper.ModelMapper;
 
-import br.com.ampla.marca.model.Marca;
+import br.com.ampla.marca.model.MarcaElasticSearch;
 import lombok.Data;
 
 @Data
-public class MarcaDTO {
+public class MarcaElasticSearchDTO {
 	private Long numeroProcesso;
 	private String nomeMarca;
 	private String descricaoSituacao;
@@ -21,8 +21,9 @@ public class MarcaDTO {
 	private LocalDate dataVigencia;
 	private String nomeTitular;
 
-	public static MarcaDTO create(Marca marca) {
+	public static MarcaElasticSearchDTO create(MarcaElasticSearch marca) {
 		ModelMapper modelMapper = new ModelMapper();
-		return marca != null? modelMapper.map(marca, MarcaDTO.class):null;
+		return modelMapper.map(marca, MarcaElasticSearchDTO.class);
+
 	}
 }

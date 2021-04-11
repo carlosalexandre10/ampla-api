@@ -1,5 +1,8 @@
 package br.com.ampla.marca.service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,5 +18,10 @@ public class DespachoService {
 	
 	public DespachoDTO incluir(Despacho despacho) {
 		return DespachoDTO.create(this.despachoRepository.save(despacho));
+	}
+
+	public List<DespachoDTO> pesquisarPorMarca(Long numeroProcessoMarca) {
+		return this.despachoRepository.findByMarcaNumeroProcesso(numeroProcessoMarca).stream().map(DespachoDTO::create)
+				.collect(Collectors.toList());
 	}
 }

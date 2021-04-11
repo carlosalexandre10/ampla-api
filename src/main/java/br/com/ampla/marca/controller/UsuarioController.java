@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 
 	@PostMapping()
+	@Secured("ROLE_ADMIN")
 	public ResponseEntity<UsuarioDTO> incluir(@RequestBody @Valid Usuario usuario) {
 		UsuarioDTO cursoDTO = this.usuarioService.incluir(usuario);
 		
