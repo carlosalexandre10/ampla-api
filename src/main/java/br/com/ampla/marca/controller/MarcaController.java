@@ -29,17 +29,17 @@ public class MarcaController {
 	private MarcaService marcaService;
 
 	@GetMapping("/{nomeMarca}")
-	public ResponseEntity<List<MarcaDTO>> pesquisarPorDescricao(@PathVariable String nomeMarca) {
-		List<MarcaDTO> MarcasDTO = this.marcaService.pesquisarPorNome(nomeMarca);
+	public ResponseEntity<List<MarcaDTO>> pesquisarPorDescricao(@PathVariable String nomeMarca, @RequestParam(value = "radical", defaultValue = "false") Boolean radical) {
+		List<MarcaDTO> MarcasDTO;
+
+		if(radical)
+			MarcasDTO = this.marcaService.pesquisarPorDescricaoRadical(nomeMarca);
+		else
+			MarcasDTO = this.marcaService.pesquisarPorNome(nomeMarca);
 
 		return MarcasDTO.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(MarcasDTO);
 	}
-	@GetMapping("/radical/{nomeMarca}")
-	public ResponseEntity<List<MarcaDTO>> pesquisarPorDescricaoRadical(@PathVariable String nomeMarca) {
-		List<MarcaDTO> MarcasDTO = this.marcaService.pesquisarPorDescricaoRadical(nomeMarca);
 
-		return MarcasDTO.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(MarcasDTO);
-	}
 	@GetMapping("/processo/{numeroProcesso}")
 	public ResponseEntity<MarcaDTO> pesquisarPorNumeroProcesso(@PathVariable Long numeroProcesso) {
 		MarcaDTO MarcasDTO = this.marcaService.pesquisaNumeroProcesso(numeroProcesso);
