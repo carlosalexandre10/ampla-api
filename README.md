@@ -60,7 +60,7 @@ O vídeo do nosso pitch está no Youtube [neste link](https://www.youtube.com/wa
 * **Método:**  
    `POST` 
   
-*  **Parâmetros da URL **
+*  **Parâmetros da URL**
 
    **Requerido:**
  
@@ -110,7 +110,7 @@ O vídeo do nosso pitch está no Youtube [neste link](https://www.youtube.com/wa
 * **Método:**  
    `POST` 
   
-*  **Parâmetros da URL **
+*  **Parâmetros da URL**
 
    **Requerido:**
  
@@ -136,12 +136,12 @@ Token Bearer de ADMIN
 * **Método:**  
    `POST` 
   
-*  **Parâmetros da URL **
+*  **Parâmetros da URL**
 
    **Requerido:**
 Não tem
 
-*  **Parâmetros no Header **
+*  **Parâmetros no Header**
 
 Não tem
 
@@ -165,13 +165,13 @@ Não tem
 * **Método:**  
    `GET` 
   
-*  **Parâmetros da URL **
+*  **Parâmetros da URL**
 
    **Requerido:**
 NOME_MARCA
 [OPCIONAL] radical
 
-*  **Parâmetros no Header **
+*  **Parâmetros no Header**
 
 BEARER TOKEN
 
@@ -207,12 +207,12 @@ BEARER TOKEN
 * **Método:**  
    `GET` 
   
-*  **Parâmetros da URL **
+*  **Parâmetros da URL**
 
    **Requerido:**
 Número do processo
 
-*  **Parâmetros no Header **
+*  **Parâmetros no Header**
 BEARER TOKEN
 
 * **Parâmetros**
@@ -247,12 +247,12 @@ BEARER TOKEN
 * **Método:**  
    `GET` 
   
-*  **Parâmetros da URL **
+*  **Parâmetros da URL**
 
    **Requerido:**
 NOME_MARCA
 
-*  **Parâmetros no Header **
+*  **Parâmetros no Header**
 
 BEARER TOKEN
 
@@ -288,12 +288,12 @@ BEARER TOKEN
 * **Método:**  
    `GET` 
   
-*  **Parâmetros da URL **
+*  **Parâmetros da URL**
 
    **Requerido:**
 CODIGO_NICE
 
-*  **Parâmetros no Header **
+*  **Parâmetros no Header**
 
 BEARER TOKEN
 
