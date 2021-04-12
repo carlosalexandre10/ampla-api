@@ -3,7 +3,6 @@ package br.com.ampla.marca.service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import br.com.ampla.marca.dto.NiceDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
