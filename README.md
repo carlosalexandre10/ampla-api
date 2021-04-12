@@ -38,3 +38,54 @@ Utilizando o framework open source [Java Spring](https://spring.io/) com o Java 
 A partir dos dados disponibilizados, junto com os especialistas do time, mapeamos os dados no seguinte modelo relacional
 
 ![alt text](https://github.com/carlosalexandre10/ampla-api/blob/develop/doc/bd.png?raw=true)
+
+## Descrição dos serviços disponíveis na API
+
+### Cadastro de usuários
+----
+  Serviço destino ao cadastro de usuários que irão utilizar a API. Somente usuários admin podem criar novos usuários. Retorna o JSON do usuário cadastrado
+
+* **URL**
+
+  /usuarios
+
+* **Método:**  
+   `POST` 
+  
+*  **Parâmetros da URL **
+
+   **Requerido:**
+ 
+    Não tem  
+
+* **Parâmetros**
+
+  {
+	"nome": "NOME_USUARIO",
+	"email": "EMAIL",
+	"senha": "SENHA",
+	[OPCIONAL]"roles": [{"id": 1},{"id": 2}]
+}
+
+* **Resposta de sucesso:**  
+  
+  * **Código:** 201 <br />
+    **Conteúdo:** `{
+  "id": "f844c075-d9b0-468b-bbac-f1deb2ed5ec2",
+  "nome": "NOME_USUARIO",
+  "email": "EMAIL"
+}`
+ 
+* **Resposta de Erro:**
+
+  * **Code:** 405 UNAUTHORIZED <br />
+    **Content:** `{
+  "errors": [
+    "Email já foi cadastrado!"
+  ]
+}`
+
+   OU
+
+  * **Code:** 423 METHOD NOT ALLOWED <br />
+    **Content:** `{ error : "Email Invalid" }`
