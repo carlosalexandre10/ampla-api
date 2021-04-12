@@ -115,7 +115,7 @@ O vídeo do nosso pitch está no Youtube [neste link](https://www.youtube.com/wa
    **Requerido:**
  
 
-*  **Parâmetros no Header **
+*  **Parâmetros no Header**
 
 Token Bearer de ADMIN
 
