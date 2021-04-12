@@ -151,39 +151,84 @@ Não tem
 
 
 
-### Consultar Marcas
+### Consultar marca
 ----
- Obter o token requerido na maioria dos serviços da API.
+ Consultar se a marca existe na base de dados do INPI
 
 * **URL**
 
-  /login
+  /marcas
 
 * **Método:**  
-   `POST` 
+   `GET` 
   
 *  **Parâmetros da URL **
 
    **Requerido:**
-Não tem
+NOME_MARCA
+[OPCIONAL] radical
 
 *  **Parâmetros no Header **
 
-Não tem
+BEARER TOKEN
 
 * **Parâmetros**
 
-  {
-	"nome": "NOME_USUARIO",
-	"email": "EMAIL",
-}
+  Não tem
 
 * **Resposta de sucesso:**  
   
   * **Código:** 200 OK <br />
     **Conteúdo:** `{
-  "id": "c460e86a-9fcc-42fa-9a9a-bfb3ad601a4f",
-  "nome": "NOME_USUARIO",
-  "email": "EMAIL",
-  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkaWVnbzFAZ21haWwuY29tIiwiZXhwIjoxNjE5MDk0MTAzLCJyb2wiOlsiUk9MRV9VU0VSIl19.lJcfPRauXMxPS5lj5fwdUPBkTLM5Hfsirh_-1u67R_JjdOTjSWw-3twR2fdvkQgJ2cWAgAk0s0QVCfX0OH9nZA"
+    "numeroProcesso": 913973807,
+    "nomeMarca": "Shadowplay",
+    "descricaoSituacao": "Pedido definitivamente arquivado",
+    "descricaoApresentacao": "Mista",
+    "descricaoNatureza": "De Produto",
+    "classificacaoViena": "4 - 5.5.20     - Flores estilizadas  /  4 - 27.5.1     - Letras apresentando um grafismo especial",
+    "nomeRepresentanteLegal": "",
+    "dataDeposito": "2018-01-01",
+    "dataConcessao": null,
+    "dataVigencia": null,
+    "nomeTitular": "ROGERIA ROSA XERXENEVSKY - ME"
+  }`
+
+### Consultar número processo
+----
+ Consultar o número do processo da marca
+
+* **URL**
+
+ /marcas/processo
+
+* **Método:**  
+   `GET` 
+  
+*  **Parâmetros da URL **
+
+   **Requerido:**
+Número do processo
+
+*  **Parâmetros no Header **
+BEARER TOKEN
+
+* **Parâmetros**
+
+  Não tem
+
+* **Resposta de sucesso:**  
+  
+  * **Código:** 200 OK <br />
+    **Conteúdo:** `{
+  "numeroProcesso": 914046853,
+  "nomeMarca": "Masterchefe Bolo",
+  "descricaoSituacao": "Registro de marca em vigor",
+  "descricaoApresentacao": "Nominativa",
+  "descricaoNatureza": "De Serviço",
+  "classificacaoViena": "",
+  "nomeRepresentanteLegal": "",
+  "dataDeposito": "2018-01-19",
+  "dataConcessao": "2019-04-24",
+  "dataVigencia": "2029-04-24",
+  "nomeTitular": "J J PRADO CONSULTORIA ME"
 }`
