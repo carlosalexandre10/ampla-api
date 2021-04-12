@@ -3,7 +3,7 @@ Este projeto destina-se ao Hack INPI da equipe **Ampla Assessoria**
 
 ## Integrantes
 - Carlos Alexandre da Silva Oliveira
-- Diego Américo Guedes – Responsável pela equipe
+- Diego Américo Guedes – **Responsável pela equipe**
 - Frederico Augusto Martins Correia
 - Iamê Domingues Silva
 - Shalon Andrade Santos
