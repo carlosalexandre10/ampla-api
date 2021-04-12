@@ -283,7 +283,7 @@ BEARER TOKEN
 
 * **URL**
 
-  /nice
+  /nices
 
 * **Método:**  
    `GET` 
@@ -304,18 +304,25 @@ BEARER TOKEN
 * **Resposta de sucesso:**  
   
   * **Código:** 200 OK <br />
-    **Conteúdo:** `{
-    "numeroProcesso": 913973807,
-    "nomeMarca": "Shadowplay",
-    "descricaoSituacao": "Pedido definitivamente arquivado",
-    "descricaoApresentacao": "Mista",
-    "descricaoNatureza": "De Produto",
-    "classificacaoViena": "4 - 5.5.20     - Flores estilizadas  /  4 - 27.5.1     - Letras apresentando um grafismo especial",
-    "nomeRepresentanteLegal": "",
-    "dataDeposito": "2018-01-01",
-    "dataConcessao": null,
-    "dataVigencia": null,
-    "nomeTitular": "ROGERIA ROSA XERXENEVSKY - ME"
-  }`
+    **Conteúdo:** `[
+  {
+    "codigoClassificacaoNice": 42,
+    "numeroRevisaoClassificacaoNice": 11,
+    "especificacaoClassificacaoNice": "Certificação de Comércio varejista de roupas ,atacadista de roupas,fabricantes de roupas",
+    "marca": {
+      "numeroProcesso": 914039431,
+      "nomeMarca": "Be Yourself",
+      "descricaoSituacao": "Pedido definitivamente arquivado",
+      "descricaoApresentacao": "Mista",
+      "descricaoNatureza": "Certific.",
+      "classificacaoViena": "4 - 9.3.1      - Roupas  /  4 - 9.3.14     - Roupas de baixo, cuecas, fraldas, roupas de banho  /  4 - 9.3.26     - Grupos de roupas de diferentes espécies  /  4 - 9.3.2      - Paletós, casacos, mantôs, capas  /  4 - 9.3.9      - Camisas, camisetas, corpetes, blusas de manga comprida",
+      "nomeRepresentanteLegal": "",
+      "dataDeposito": "2018-01-18",
+      "dataConcessao": null,
+      "dataVigencia": null,
+      "nomeTitular": "VINICIUS BASILIO GASPAR"
+    }
+  }
+]`
   
   
