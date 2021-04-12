@@ -33,6 +33,7 @@ Utilizando o framework open source [Java Spring](https://spring.io/) com o Java 
 - _Spring Security_ para autenticação e gerenciamento de permissões de usuários
 - _Lombok_ para mapeamento automático de construtores, getter, setter, etc
 - _Postgres_ como banco de dados relacional
+- _ElasticSearch_ para uma possível utilização de um banco de dados NoSQL e separado do banco de dados utilizado para outras funcionalidades
 
 ## Modelo do banco de dados
 A partir dos dados disponibilizados, junto com os especialistas do time, mapeamos os dados no seguinte modelo relacional
