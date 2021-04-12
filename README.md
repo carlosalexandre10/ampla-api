@@ -89,3 +89,96 @@ A partir dos dados disponibilizados, junto com os especialistas do time, mapeamo
 
   * **Code:** 423 METHOD NOT ALLOWED <br />
     **Content:** `{ error : "Email Invalid" }`
+    
+ 
+### Envio de CSV
+----
+  Como não tínhamos um banco cadastrado, populamos os dados a partir dos CSV disponibilizados. Somente usuários ADMIN podem inserir dados. Em princípio, esse serviço não faria sentido em um ambiente de produção no INPI
+
+* **URL**
+
+  /leitorCSV/upload
+
+* **Método:**  
+   `POST` 
+  
+*  **Parâmetros da URL **
+
+   **Requerido:**
+ 
+
+*  **Parâmetros no Header **
+
+Token Bearer de ADMIN
+
+* **Parâmetros**
+
+  {
+	"file": ARQUIVO_CSV
+}
+
+### Pegar Autenticação
+----
+ Obter o token requerido na maioria dos serviços da API.
+
+* **URL**
+
+  /login
+
+* **Método:**  
+   `POST` 
+  
+*  **Parâmetros da URL **
+
+   **Requerido:**
+Não tem
+
+*  **Parâmetros no Header **
+
+Não tem
+
+* **Parâmetros**
+
+  {
+	"nome": "NOME_USUARIO",
+	"email": "EMAIL",
+}
+
+
+
+### Consultar Marcas
+----
+ Obter o token requerido na maioria dos serviços da API.
+
+* **URL**
+
+  /login
+
+* **Método:**  
+   `POST` 
+  
+*  **Parâmetros da URL **
+
+   **Requerido:**
+Não tem
+
+*  **Parâmetros no Header **
+
+Não tem
+
+* **Parâmetros**
+
+  {
+	"nome": "NOME_USUARIO",
+	"email": "EMAIL",
+}
+
+* **Resposta de sucesso:**  
+  
+  * **Código:** 200 OK <br />
+    **Conteúdo:** `{
+  "id": "c460e86a-9fcc-42fa-9a9a-bfb3ad601a4f",
+  "nome": "NOME_USUARIO",
+  "email": "EMAIL",
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkaWVnbzFAZ21haWwuY29tIiwiZXhwIjoxNjE5MDk0MTAzLCJyb2wiOlsiUk9MRV9VU0VSIl19.lJcfPRauXMxPS5lj5fwdUPBkTLM5Hfsirh_-1u67R_JjdOTjSWw-3twR2fdvkQgJ2cWAgAk0s0QVCfX0OH9nZA"
+}`
