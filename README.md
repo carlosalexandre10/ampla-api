@@ -232,3 +232,85 @@ BEARER TOKEN
   "dataVigencia": "2029-04-24",
   "nomeTitular": "J J PRADO CONSULTORIA ME"
 }`
+
+### Consultar marca no ElasticSearch
+----
+ Consultar se a marca existe na base de dados do INPI no ElasticSearch
+
+* **URL**
+
+  /marcas-elasticearch
+
+* **Método:**  
+   `GET` 
+  
+*  **Parâmetros da URL **
+
+   **Requerido:**
+NOME_MARCA
+
+*  **Parâmetros no Header **
+
+BEARER TOKEN
+
+* **Parâmetros**
+
+  Não tem
+
+* **Resposta de sucesso:**  
+  
+  * **Código:** 200 OK <br />
+    **Conteúdo:** `{
+    "numeroProcesso": 913973807,
+    "nomeMarca": "Shadowplay",
+    "descricaoSituacao": "Pedido definitivamente arquivado",
+    "descricaoApresentacao": "Mista",
+    "descricaoNatureza": "De Produto",
+    "classificacaoViena": "4 - 5.5.20     - Flores estilizadas  /  4 - 27.5.1     - Letras apresentando um grafismo especial",
+    "nomeRepresentanteLegal": "",
+    "dataDeposito": "2018-01-01",
+    "dataConcessao": null,
+    "dataVigencia": null,
+    "nomeTitular": "ROGERIA ROSA XERXENEVSKY - ME"
+  }`
+
+### Consultar Nice
+----
+ Consultar código nice
+
+* **URL**
+
+  /nice
+
+* **Método:**  
+   `GET` 
+  
+*  **Parâmetros da URL **
+
+   **Requerido:**
+CODIGO_NICE
+
+*  **Parâmetros no Header **
+
+BEARER TOKEN
+
+* **Parâmetros**
+
+  Não tem
+
+* **Resposta de sucesso:**  
+  
+  * **Código:** 200 OK <br />
+    **Conteúdo:** `{
+    "numeroProcesso": 913973807,
+    "nomeMarca": "Shadowplay",
+    "descricaoSituacao": "Pedido definitivamente arquivado",
+    "descricaoApresentacao": "Mista",
+    "descricaoNatureza": "De Produto",
+    "classificacaoViena": "4 - 5.5.20     - Flores estilizadas  /  4 - 27.5.1     - Letras apresentando um grafismo especial",
+    "nomeRepresentanteLegal": "",
+    "dataDeposito": "2018-01-01",
+    "dataConcessao": null,
+    "dataVigencia": null,
+    "nomeTitular": "ROGERIA ROSA XERXENEVSKY - ME"
+  }`
