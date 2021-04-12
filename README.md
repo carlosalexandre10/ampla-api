@@ -43,6 +43,9 @@ A partir dos dados disponibilizados, junto com os especialistas do time, mapeamo
 ## Testando a API
 A API foi testada utilizando a ferramente livre [Insomnia](https://insomnia.rest/download) . Nosso arquivo Insomnia está [neste link](https://github.com/carlosalexandre10/ampla-api/blob/develop/doc/Insomnia_2021-04-11.json)
 
+## Vídeo do Pitch
+
+O vídeo do nosso pitch está no Youtube [neste link](https://www.youtube.com/watch?v=BcxcW8N01kA)
 
 ## Descrição dos serviços disponíveis na API
 
@@ -314,3 +317,5 @@ BEARER TOKEN
     "dataVigencia": null,
     "nomeTitular": "ROGERIA ROSA XERXENEVSKY - ME"
   }`
+  
+  
