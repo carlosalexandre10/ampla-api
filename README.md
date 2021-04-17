@@ -326,6 +326,6 @@ BEARER TOKEN
       "nomeTitular": "VINICIUS BASILIO GASPAR"
     }
   }
-]`
+]`  
   
-  
+
